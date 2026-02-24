@@ -316,6 +316,10 @@ async def handle_url(message: types.Message) -> None:
 
 async def main() -> None:
     logger.info("Bot ishga tushmoqda...")
+    # Avvalgi polling ulanishini uzish — Railway deploy paytida
+    # eski konteyner hali to'xtamagan bo'lishi mumkin
+    await bot.delete_webhook(drop_pending_updates=True)
+    await asyncio.sleep(2)
     await dp.start_polling(bot)
 
 
