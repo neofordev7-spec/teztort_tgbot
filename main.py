@@ -316,7 +316,13 @@ async def handle_url(message: types.Message) -> None:
 
 async def main() -> None:
     logger.info("Bot ishga tushmoqda...")
-    await dp.start_polling(bot)
+    # Avvalgi polling sessiyasini bekor qilish — bu TelegramConflictError oldini oladi.
+    # Railway yangi konteyner ishga tushganda eski konteyner hali to'xtamagan bo'lishi mumkin.
+    await bot.delete_webhook(drop_pending_updates=True)
+    try:
+        await dp.start_polling(bot)
+    finally:
+        await bot.session.close()
 
 
 if __name__ == "__main__":
