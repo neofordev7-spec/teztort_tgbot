@@ -21,10 +21,16 @@ from aiogram.types import FSInputFile
 import yt_dlp
 
 # ---------------------------------------------------------------------------
-# SOZLAMALAR
+# SOZLAMALAR (Faqat Railway Variables orqali ishlaydi)
 # ---------------------------------------------------------------------------
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8728845267:AAHDjPUSLXnr0F4DXkJum9Ld6SlTWIfvuBQ")
-CHANNEL_ID = int(os.getenv("CHANNEL_ID", "-1003740714437"))
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise ValueError("❌ BOT_TOKEN Railway Variables'da topilmadi! Iltimos, Railway'ga tokenni kiriting.")
+
+CHANNEL_ID_STR = os.getenv("CHANNEL_ID")
+if not CHANNEL_ID_STR:
+    raise ValueError("❌ CHANNEL_ID Railway Variables'da topilmadi! Iltimos, Railway'ga kanal ID sini kiriting.")
+CHANNEL_ID = int(CHANNEL_ID_STR)
 
 MAX_FILE_SIZE = 50 * 1024 * 1024  # 50 MB — Telegram bot API limiti
 
@@ -325,4 +331,3 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
-
