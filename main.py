@@ -23,8 +23,8 @@ import yt_dlp
 # ---------------------------------------------------------------------------
 # SOZLAMALAR
 # ---------------------------------------------------------------------------
-BOT_TOKEN = "8728845267:AAGr3wWSIXzvw-KnTNgNVKDOD20yTsfmxkU"
-CHANNEL_ID = -1003740714437  # Maxfiy kesh kanali
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8728845267:AAGr3wWSIXzvw-KnTNgNVKDOD20yTsfmxkU")
+CHANNEL_ID = int(os.getenv("CHANNEL_ID", "-1003740714437"))
 
 MAX_FILE_SIZE = 50 * 1024 * 1024  # 50 MB — Telegram bot API limiti
 
