@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "SignalAI - Muammolarni hal qilish platformasi",
+  title: "CitySense - Shahar muammolarini hal qilish platformasi",
   description: "Shahar muammolarini xabar qiling, ovoz bering, analitika oling",
 };
 

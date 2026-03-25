@@ -4,16 +4,16 @@ services:
   db:
     image: postgres:16-alpine
     environment:
-      POSTGRES_USER: signalai
-      POSTGRES_PASSWORD: signalai_pass
-      POSTGRES_DB: signalai
+      POSTGRES_USER: citysense
+      POSTGRES_PASSWORD: citysense_pass
+      POSTGRES_DB: citysense
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./backend/src/db/init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5432:5432"
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U signalai"]
+      test: ["CMD-SHELL", "pg_isready -U citysense"]
       interval: 5s
       timeout: 5s
       retries: 5

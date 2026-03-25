@@ -26,7 +26,7 @@ async function start() {
     await initDatabase();
 
     app.listen(PORT, "0.0.0.0", () => {
-      console.log(`SignalAI Backend running on port ${PORT}`);
+      console.log(`CitySense Backend running on port ${PORT}`);
     });
 
     // Start Telegram bot if BOT_TOKEN is set

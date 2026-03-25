@@ -1,4 +1,4 @@
--- SignalAI Database Schema
+-- CitySense Database Schema
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 

@@ -1,7 +1,7 @@
 {
-  "name": "signalai-backend",
+  "name": "citysense-backend",
   "version": "1.0.0",
-  "description": "SignalAI Platform Backend",
+  "description": "CitySense Platform Backend",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",

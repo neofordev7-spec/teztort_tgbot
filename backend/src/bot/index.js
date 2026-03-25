@@ -4,7 +4,7 @@ const { Telegraf, Markup } = require("telegraf");
 const db = require("../services/db");
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
-const WEBAPP_URL = process.env.WEBAPP_URL || "https://signalai.example.com";
+const WEBAPP_URL = process.env.WEBAPP_URL || "https://citysense.example.com";
 
 // /start command
 bot.start(async (ctx) => {
@@ -26,7 +26,7 @@ bot.start(async (ctx) => {
 
   await ctx.reply(
     `Assalomu alaykum, ${user.first_name}! 👋\n\n` +
-      `🔍 *SignalAI* — muammolarni hal qilish platformasi\n\n` +
+      `🏙 *CitySense* — shahar muammolarini hal qilish platformasi\n\n` +
       `Bu platforma orqali siz:\n` +
       `📝 Shahar muammolarini xabar qilishingiz\n` +
       `🗳 Boshqalar muammosiga ovoz berishingiz\n` +
@@ -56,7 +56,7 @@ bot.start(async (ctx) => {
 // /help command
 bot.help((ctx) => {
   ctx.reply(
-    `📖 *SignalAI Yordam*\n\n` +
+    `📖 *CitySense Yordam*\n\n` +
       `🔹 /start — Ilovani boshlash\n` +
       `🔹 /stats — O'z statistikangiz\n` +
       `🔹 /top — Eng ko'p ovoz olgan muammolar\n` +
@@ -131,7 +131,7 @@ bot.command("top", async (ctx) => {
 // Launch bot
 bot
   .launch()
-  .then(() => console.log("SignalAI Bot started"))
+  .then(() => console.log("CitySense Bot started"))
   .catch((err) => console.error("Bot launch error:", err));
 
 // Graceful stop

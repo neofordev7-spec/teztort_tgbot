@@ -51,14 +51,14 @@ export default function HomePage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-            SignalAI
+            CitySense
           </h1>
           <p className="text-sm text-gray-500 dark:text-gray-400">
             Muammolarni xabar qiling
           </p>
         </div>
         <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-          S
+          CS
         </div>
       </div>
 
